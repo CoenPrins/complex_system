@@ -1,4 +1,3 @@
-
 from mesa import Agent, Model
 from mesa.space import MultiGrid
 from mesa.time import RandomActivation
@@ -32,13 +31,14 @@ class HiveModel(Model):
               # Get Random Cell
               x = self.random.randrange(self.grid.width)
               y = self.random.randrange(self.grid.height)
-              print(x, y)
+              # print(x, y)
             else:
               x,y = 0,0 #start at the origin (top left)
-            new_ant = Ant(i, self, (x,y))
+            new_ant = Ant(self.next_id(), self, (x,y))
             #add pos and schedule
             self.grid.place_agent(new_ant, (x,y))
-            print("hallo")
+            print(self.grid)
+            # print("hallo")
             self.schedule.add(new_ant)
 
 

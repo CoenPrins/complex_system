@@ -8,7 +8,7 @@ class Ant(Agent):
         self.energy = 100
         self.pos = pos
         self.state = "FORAGING"
-        self.id = unique_id
+
 
 
     def step(self):
@@ -20,4 +20,4 @@ class Ant(Agent):
         possible_steps = self.model.grid.get_neighborhood(self.pos, moore=True, include_center= False, radius = 1)
         new_position = self.random.choice(possible_steps)
         self.model.grid.move_agent(self, new_position)
-        print("agent has moved", self.id, self.pos)
+        # print("agent has moved", self.unique_id, self.pos)
