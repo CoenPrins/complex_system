@@ -63,7 +63,7 @@ class CanvasGrid_ant(CanvasGrid):
         self.grid_height = grid_height
         self.canvas_width = canvas_width
         self.canvas_height = canvas_height
-        print("tralalalalalalal")
+
         new_element = "new CanvasModule({}, {}, {}, {})".format(
             self.canvas_width, self.canvas_height, self.grid_width, self.grid_height
         )

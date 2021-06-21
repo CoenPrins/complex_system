@@ -37,7 +37,7 @@ class HiveModel(Model):
             new_ant = Ant(self.next_id(), self, (x,y))
             #add pos and schedule
             self.grid.place_agent(new_ant, (x,y))
-            print(self.grid)
+
             # print("hallo")
             self.schedule.add(new_ant)
 
@@ -48,4 +48,3 @@ class HiveModel(Model):
         # Save the statistics
         self.mean_x_pos.append(sum([agent_.pos[0] for agent_ in self.schedule.agents])/self.num_agents)
         self.mean_y_pos.append(sum([agent_.pos[1] for agent_ in self.schedule.agents])/self.num_agents)
-        print(self.grid)
